@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tienda de juegos - alfa_version</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Custom script -->
+    <script type="text/javascript" src="js/navBarScript.js"></script>
+
+    <!-- Mi propio css -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Mi script de compras y carro -->
+    <script type="text/javascript" src="js/compra.js"></script>
+
+    <script>
+       
+    </script>
+
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading" style="color:white;">Tienda Online</div>
+            <div class="list-group list-group-flush">
+                <a style="color:white" href="index.html" class="list-group-item list-group-item-action bg-dark">Home</a>
+                <a style="color:white" href="carro.html" class="list-group-item list-group-item-action bg-dark">Carro</a>
+                <a style="color:white" href="#" class="list-group-item list-group-item-action bg-dark">About</a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li><button style="border:0; background: 0" id="menu-toggle"><img src="img/logoNormal.png" onmouseover="hover(this);" onmouseout="unhover(this);"></button></li>
+                        <li>
+                            <h1>Online Game Shop</h1>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+
+
+
+
+
+            <div class="container-fluid">
+                <img src="img/mandos.jpg" height="100%" width="25%"><img src="img/mandos.jpg" height="100%" width="25%"><img src="img/mandos.jpg" height="100%" width="25%"><img src="img/mandos.jpg" height="100%" width="25%">
+                <h1 class="mt-4 headerSeccion">Bienvenido a tu tienda online de juegos</h1>
+                <p class="pSeccion">Aquí podras encontrar tanto juegos de mesa, como videojuegos, pronto se ampliarán, hay que estar atento!</p>
+
+            </div>
+            <div class="container-fluid">
+                <h2 class="headerSeccion"> <img src="img/logoGames.png"> Videojuegos <img src="img/logoGames.png"></h2>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego1">
+                                <script>
+                                    var crash = {nombre:"Crash Bandicoot N-Sane Trilogy", precio: 39.99};
+                                </script>
+                                <img src="img/videojuegos/crash.jpg">
+                                <p id="nombreJuego1">
+                                    <script>
+                                        document.getElementById("nombreJuego1").innerHTML = crash.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego1">
+                                    <script>
+                                        document.getElementById("precioJuego1").innerHTML = "Precio: " + crash.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(crash);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego2">
+                                <script>
+                                    var dqXI = {nombre:"Dragon Quest XI", precio: 49.99};
+                                </script>
+                                <img src="img/videojuegos/dragonQXI.jpg">
+                                <p id="nombreJuego2">
+                                    <script>
+                                        document.getElementById("nombreJuego2").innerHTML = dqXI.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego2">
+                                    <script>
+                                        document.getElementById("precioJuego2").innerHTML = "Precio: " + dqXI.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(dqXI);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego3">
+                                <script>
+                                    var sf = {nombre:"Street Fighter", precio: 59.99}; 
+                                </script>
+                                <img src="img/videojuegos/sfV.jpg">
+                                <p id="nombreJuego3">
+                                    <script>
+                                        document.getElementById("nombreJuego3").innerHTML = sf.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego3">
+                                    <script>
+                                        document.getElementById("precioJuego3").innerHTML = "Precio: " + sf.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(sf);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego4">
+                                <script>
+                                    var mp = {nombre:"Super Mario Party", precio: 59.99};
+                                </script>
+                                <img src="img/videojuegos/superMarioParty.jpg">
+                                <p id="nombreJuego4">
+                                    <script>
+                                        document.getElementById("nombreJuego4").innerHTML = mp.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego4">
+                                    <script>
+                                        document.getElementById("precioJuego4").innerHTML = "Precio: " + mp.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(mp);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego5">
+                                <script>
+                                    var nba = {nombre:"NBA 2k20", precio: 59.99};
+                                </script>
+                                <img src="img/videojuegos/nba2k20.jfif">
+                                <p id="nombreJuego5">
+                                    <script>
+                                        document.getElementById("nombreJuego5").innerHTML = nba.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego5">
+                                    <script>
+                                        document.getElementById("precioJuego5").innerHTML = "Precio: " + nba.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(nba);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego6">
+                                <script>
+                                    var bf = {nombre:"Battlefield V", precio: 59.99}
+                                </script>
+                                <img src="img/videojuegos/bf5.jpg">
+                                <p id="nombreJuego6">
+                                    <script>
+                                        document.getElementById("nombreJuego6").innerHTML = bf.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego6">
+                                    <script>
+                                        document.getElementById("precioJuego6").innerHTML = "Precio: " + bf.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(bf);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-fluid">
+                <h2 class="headerSeccion"><img src="img/dado.png"> Juegos de mesa <img src="img/dado.png"></h2>
+
+                <!-- Seccion juegos de mesa -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego7">
+                                <script>
+                                    var m_exit = {nombre:"Exit", precio: 29.99}
+                                </script>
+                                <img src="img/juegosDeMesa/exit.jfif">
+                                <p id="nombreJuego7">
+                                    <script>
+                                        document.getElementById("nombreJuego7").innerHTML = m_exit.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego7">
+                                    <script>
+                                        document.getElementById("precioJuego7").innerHTML = "Precio: " + m_exit.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(m_exit);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego8">
+                                <script>
+                                    var m_myst = {nombre:"Mysterium", precio: 39.99};
+                                </script>
+                                <img src="img/juegosDeMesa/mysterium.jfif">
+                                <p id="nombreJuego8">
+                                    <script>
+                                        document.getElementById("nombreJuego8").innerHTML = m_myst.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego8">
+                                    <script>
+                                        document.getElementById("precioJuego8").innerHTML = "Precio: " + m_myst.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(m_myst);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego9">
+                                <script>
+                                    var m_trivial = {nombre:"Trivial", precio: 49.99}; 
+                                </script>
+                                <img src="img/juegosDeMesa/trivial.jfif">
+                                <p id="nombreJuego9">
+                                    <script>
+                                        document.getElementById("nombreJuego9").innerHTML = m_trivial.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego9">
+                                    <script>
+                                        document.getElementById("precioJuego9").innerHTML = "Precio: " + m_trivial.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(m_trivial);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego10">
+                                <script>
+                                    var m_ek = {nombre:"Exploding Kittens!", precio: 19.99};
+                                </script>
+                                <img src="img/juegosDeMesa/explodingkittens.jfif">
+                                <p id="nombreJuego10">
+                                    <script>
+                                        document.getElementById("nombreJuego10").innerHTML = m_ek.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego10">
+                                    <script>
+                                        document.getElementById("precioJuego10").innerHTML = "Precio: " + m_ek.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(m_ek);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego11">
+                                <script>
+                                    var m_dixit = {nombre:"Dixit", precio: 28.99};
+                                </script>
+                                <img src="img/juegosDeMesa/dixit.jfif">
+                                <p id="nombreJuego11">
+                                    <script>
+                                        document.getElementById("nombreJuego11").innerHTML = m_dixit.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego11">
+                                    <script>
+                                        document.getElementById("precioJuego11").innerHTML = "Precio: " + m_dixit.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(m_dixit);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="itemJuego" id="juego12">
+                                <script>
+                                    var m_bang = {nombre:"Bang!", precio: 44.99};
+                                </script>
+                                <img src="img/juegosDeMesa/bang.jfif">
+                                <p id="nombreJuego12">
+                                    <script>
+                                        document.getElementById("nombreJuego12").innerHTML = m_bang.nombre;
+                                    </script>
+                                </p>
+                                <p id="precioJuego12">
+                                    <script>
+                                        document.getElementById("precioJuego12").innerHTML = "Precio: " + m_bang.precio + "€";
+                                    </script>
+                                </p>
+                                <button onclick="miCarro.add(m_bang);"><img src="img/carrito.png"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/js-bootstrap/jquery.min.js"></script>
+    <script src="js/js-bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+</body>
+
+</html>

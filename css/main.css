@@ -1,0 +1,70 @@
+html {
+    background-image: url("../img/mandos.jpg");
+    background-repeat: repeat;
+    background-color: gray;
+}
+
+.headerSeccion {
+
+    text-align: center;
+}
+
+.pSeccion {
+    text-align: center;
+}
+
+.itemJuego {
+    position: relative;
+    border-style: outset;
+    border-color: deeppink;
+    padding: 0.rem;
+    border-width: 0.5rem;
+    height: 25rem;
+}
+
+.itemJuego > img {
+
+    position: relative;
+    width: 8rem;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+
+.itemJuego > button {
+    position: absolute;
+    left: 2.6rem;
+    right: 0;
+    bottom: 10px;
+}
+
+.itemJuego > button > img {
+
+
+    width: 2.5rem;
+
+}
+
+/* Todas los divs que empiecen por miID
+div[id^='miID']{
+    color: #F00;
+}*/
+
+
+p[id^='nombreJuego'] {
+    font-weight: bold;
+    color: deeppink;
+    position: absolute;
+    left: 0.5rem;
+    top: 12rem;
+
+}
+
+p[id^='precioJuego'] {
+    font-weight: bold;
+    color: deeppink;
+    position: absolute;
+    top: 17rem;
+    left: 0.5rem;
+
+}

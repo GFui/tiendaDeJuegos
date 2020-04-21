@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tienda de juegos - alfa_version</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Custom script -->
+    <script type="text/javascript" src="js/navBarScript.js"></script>
+
+    <!-- Mi propio css -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/cesta.css" rel="stylesheet">
+
+    <!-- Mi script de compras y carro -->
+    <script type="text/javascript" src="js/compra.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading" style="color:white;">Tienda Online</div>
+            <div class="list-group list-group-flush">
+                <a style="color:white" href="index.html" class="list-group-item list-group-item-action bg-dark">Home</a>
+                <a style="color:white" href="carro.html" class="list-group-item list-group-item-action bg-dark">Carro</a>
+                <a style="color:white" href="#" class="list-group-item list-group-item-action bg-dark">About</a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li><button style="border:0; background: 0" id="menu-toggle"><img src="img/logoNormal.png" onmouseover="hover(this);" onmouseout="unhover(this);"></button></li>
+                        <li>
+                            <h1>Online Game Shop</h1>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <img src="img/mandos.jpg" height="100%" width="25%"><img src="img/mandos.jpg" height="100%" width="25%"><img src="img/mandos.jpg" height="100%" width="25%"><img src="img/mandos.jpg" height="100%" width="25%">
+                <h1 class="mt-4 headerSeccion">Mi cesta</h1>
+            </div>
+
+            <div class="container-fluid">
+                <h2>Artículos en cesta:</h2>
+                <ul id="listaCompra">
+                    <script>
+                        var listaCompra = document.getElementById("listaCompra");
+                        var itemsAndCount = miCarro.verLista();
+                        var listaItems = itemsAndCount.items;
+                        var countOfItems = itemsAndCount.countOfItems;
+                        for(var count = 0; count < listaItems.length; count++){
+                            listaCompra.appendChild(document.createElement("li"));
+                            var lastChild = listaCompra.lastChild;
+                            lastChild.innerHTML = listaItems[count].nombre + " x" + countOfItems[count] + ", precio: " + (listaItems[count].precio*countOfItems[count]) + " €";
+                        }
+                        
+                    </script>
+                </ul>
+                <p id="numArticulos"><script>document.getElementById("numArticulos").innerHTML = "Número de articulos: " + itemsAndCount.total;</script></p>
+                <p id="precioFinal"><script>document.getElementById("precioFinal").innerHTML = "Precio total: " + miCarro.verTotal() + " €";</script></p>
+            </div>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/js-bootstrap/jquery.min.js"></script>
+    <script src="js/js-bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+</body>
+
+</html>
