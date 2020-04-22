@@ -39,8 +39,8 @@
             <div class="sidebar-heading" style="color:white;">Tienda Online</div>
             <div class="list-group list-group-flush">
                 <a style="color:white" href="index.html" class="list-group-item list-group-item-action bg-dark">Home</a>
+                <a style="color:white" href="tienda.html" class="list-group-item list-group-item-action bg-dark">Tienda</a>
                 <a style="color:white" href="carro.html" class="list-group-item list-group-item-action bg-dark">Carro</a>
-                <a style="color:white" href="#" class="list-group-item list-group-item-action bg-dark">About</a>
 
             </div>
         </div>
@@ -66,25 +66,21 @@
                 <h1 class="mt-4 headerSeccion">Mi cesta</h1>
             </div>
 
-            <div class="container-fluid">
-                <h2>Artículos en cesta:</h2>
+            <div class="containerCarro">
+                <h2><img src="img/carritoCompra.png" width="15%"> Artículos <img src="img/carritoCompra.png" width="15%"></h2>
                 <ul id="listaCompra">
-                    <script>
-                        var listaCompra = document.getElementById("listaCompra");
-                        var itemsAndCount = miCarro.verLista();
-                        var listaItems = itemsAndCount.items;
-                        var countOfItems = itemsAndCount.countOfItems;
-                        for(var count = 0; count < listaItems.length; count++){
-                            listaCompra.appendChild(document.createElement("li"));
-                            var lastChild = listaCompra.lastChild;
-                            lastChild.innerHTML = listaItems[count].nombre + " x" + countOfItems[count] + ", precio: " + (listaItems[count].precio*countOfItems[count]) + " €";
-                        }
-                        
-                    </script>
+
                 </ul>
-                <p id="numArticulos"><script>document.getElementById("numArticulos").innerHTML = "Número de articulos: " + itemsAndCount.total;</script></p>
-                <p id="precioFinal"><script>document.getElementById("precioFinal").innerHTML = "Precio total: " + miCarro.verTotal() + " €";</script></p>
+                <p id="numArticulos">
+
+                </p>
+                <p id="precioFinal">
+
+                </p>
             </div>
+            <script>
+                miCarro.actualizarLista();
+            </script>
 
         </div>
         <!-- /#page-content-wrapper -->

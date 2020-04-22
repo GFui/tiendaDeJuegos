@@ -1,8 +1,4 @@
-html {
-    background-image: url("../img/mandos.jpg");
-    background-repeat: repeat;
-    background-color: gray;
-}
+
 
 .headerSeccion {
 
@@ -66,5 +62,17 @@ p[id^='precioJuego'] {
     position: absolute;
     top: 17rem;
     left: 0.5rem;
+    width: 25%;
+}
 
+#imgPortada {
+    position: relative;
+    left: 35rem;
+}
+
+#bannerBot {
+    
+    position:absolute;
+    top: 48rem;
+    
 }

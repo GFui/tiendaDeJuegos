@@ -2,3 +2,33 @@ ul {
     list-style: none;
     padding-left: 0;
 }
+
+.deleteButton {
+    position: relative;
+    
+    width: 2rem; 
+    border-radius: 50%;
+    border-width: 0rem;
+}
+.deleteButton > img {
+    
+    width: 0.9rem;
+}
+.containerCarro {
+    text-align: center;
+    border-style: outset;
+    border-radius: 15%;
+    border-color: dodgerblue;
+    margin: 0 auto;
+    width: 35%;
+    padding: 0.7rem;
+}
+
+#listaCompra > li{
+    border-style: inset;
+    border-radius: 15%;
+    border-color: dodgerblue;
+    border-width: 0.25rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
