@@ -38,7 +38,7 @@ var carro = function () {
     };
 
     var quitarItem = function (buttonId) {
-        
+        //Button_x
         var onlyId = buttonId.split("_")[1];
         if (itemCount[onlyId] > 1) {
             precioTotal -= myItems[onlyId].precio;
